@@ -3,27 +3,28 @@
 <head>
   <meta charset="utf-8">
   <script src="jquery-3.2.1.js"></script>
-  <title>Exercice 1</title>
+  <title>Exercice 2</title>
 </head>
 <body>
   <form>
     <button type="button" name="button" id="moreButton">+</button>
-    <label for="compteur">chiffre : </label><input type="nom" name="nom" value="" id="number" />
+    <label for="compteur">chiffre : </label><input type="nom" name="nom" value="0" id="number" />
     <button type="button" name="button" id="lessButton">-</button>
   </form>
   <script>
-  var counter=0;
-  $('#number').val(counter);
-  $('#moreButton').click(function(){
-    counter=$('#number').val();
-    counter++;
-    $('#number').val(counter);
-  })
-  $('#lessButton').click(function(){
+  $(function(){
+    var counter=0;
+    $('#moreButton').click(function(){
       counter=$('#number').val();
-      counter--;
+      counter++;
       $('#number').val(counter);
-    })
+  });
+    $('#lessButton').click(function(){
+        counter=$('#number').val();
+        counter--;
+        $('#number').val(counter);
+    });
+  });
   </script>
 </body>
 </html>
